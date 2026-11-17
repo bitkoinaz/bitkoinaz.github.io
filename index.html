@@ -615,7 +615,8 @@
           var icon = src
             ? '<img src="' + esc(src) + '" alt="" data-letter="' + esc(letter) + '" onerror="socialFallback(this)">'
             : '<span class="social-letter">' + esc(letter) + "</span>";
-          buttons += '<a class="social" href="' + esc(href) + '" target="_blank" rel="noopener">' +
+          var trackId = id || "link";
+          buttons += '<a class="social" href="' + esc(href) + '" target="_blank" rel="noopener" data-goatcounter-click="social-' + esc(trackId) + '" data-goatcounter-title="' + esc(name) + '">' +
             '<span class="social-icon' + (id === "x" ? " is-x" : "") + '">' + icon + (id === "community" ? GROUP_BADGE : "") + "</span>" +
             '<span class="social-label">' + esc(name) + "</span></a>";
         });
@@ -623,14 +624,16 @@
         return '<section class="follow" aria-label="Follow us"><p class="follow-title">Follow us</p><div class="socials">' + buttons + "</div></section>";
       }
 
-      function claimHtml(url, name, large) {
+      function claimHtml(url, name, large, id) {
         var href = safeUrl(url);
         var label = "Claim " + String(name || "").trim();
         var cls = large ? "claim claim-lg" : "claim";
         if (!href) {
           return '<span class="' + cls + '" aria-disabled="true">Claim ›</span>';
         }
-        return '<a class="' + cls + '" href="' + esc(href) + '" target="_blank" rel="noopener" aria-label="' + esc(label) + '">Claim ›</a>';
+        var slug = normId(id) || "link";
+        var path = "click-" + slug + (large ? "-featured" : "");
+        return '<a class="' + cls + '" href="' + esc(href) + '" target="_blank" rel="noopener" aria-label="' + esc(label) + '" data-goatcounter-click="' + esc(path) + '" data-goatcounter-title="' + esc(name) + '">Claim ›</a>';
       }
 
       function usable(data) {
@@ -679,7 +682,7 @@
             logoHtml(featured.id, featured.name, featured.icon) +
             '<div><div class="name-line"><h2>' + esc(featured.name) + "</h2>" + tagHtml(featured.badge) + "</div>" +
             '<p class="bonus">' + bonusHtml(featured.bonus, featured.highlight) + "</p></div></div>" +
-            claimHtml(featured.url, featured.name, true) +
+            claimHtml(featured.url, featured.name, true, featured.id) +
             "</article>";
         }
 
@@ -690,7 +693,7 @@
               logoHtml(item.id, item.name, item.icon) +
               '<div class="meta"><div class="name-line"><h2>' + esc(item.name) + "</h2>" + tagHtml(item.badge) + "</div>" +
               '<p class="bonus">' + bonusHtml(item.bonus, item.highlight) + "</p></div>" +
-              claimHtml(item.url, item.name, false) +
+              claimHtml(item.url, item.name, false, item.id) +
               "</article>";
           });
           html += "</div>";
@@ -701,6 +704,9 @@
         var footer = String(data.footer || "").trim();
         if (footer) html += "<footer>" + esc(footer) + "</footer>";
         app.innerHTML = html;
+        if (window.goatcounter && typeof window.goatcounter.bind_events === "function") {
+          window.goatcounter.bind_events();
+        }
       }
 
       fetch("links.json", { cache: "no-cache" })
@@ -717,5 +723,6 @@
         });
     })();
   </script>
+  <script data-goatcounter="https://bitkoinaz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

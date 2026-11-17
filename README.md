@@ -50,6 +50,10 @@
 
 Чтобы сделать биржу главной, запишите её `id` в поле `featured`.
 
+## Статистика
+
+Просмотры и клики смотрите на [https://bitkoinaz.goatcounter.com](https://bitkoinaz.goatcounter.com). Клики попадают отдельными путями: `click-<id>` для кнопок Claim, `click-<id>-featured` для большой карточки и `social-<id>` для блока Follow us. Новый `id` в `links.json` получает свой счётчик сам.
+
 ## Файл .nojekyll
 
 В корне репозитория лежит пустой файл `.nojekyll`. Он отключает Jekyll на GitHub Pages, чтобы `links.json` и остальные файлы отдавались как есть. Не удаляйте его.
