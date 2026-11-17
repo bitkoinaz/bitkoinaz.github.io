@@ -36,6 +36,14 @@
       "highlight": "High rebate rate",
       "badge": ""
     },
+       {
+      "id": "bitget",
+      "name": "Bitget",
+      "url": "https://partner.bitget.com/bg/bitkoinaz",
+      "bonus": "High rebate rate and exclusive campaigns",
+      "highlight": "High rebate rate",
+      "badge": ""
+    },
     {
       "id": "okx",
       "name": "OKX",
