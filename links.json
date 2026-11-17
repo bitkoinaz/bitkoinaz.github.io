@@ -1,47 +1,47 @@
 {
   "title": "Exclusive Offers",
   "subtitle": "BitkoinAz",
-  "footer": "Бонусы выплачивает биржа после регистрации и депозита.",
-  "featured": "bybit",
+  "footer": "Rewards are paid by the exchange after sign-up and deposit.",
+  "featured": "binance",
   "exchanges": [
-    {
-      "id": "bybit",
-      "name": "Bybit",
-      "url": "https://partner.bybit.com/b/bitkoin",
-      "bonus": "До $250 каждому: тебе и другу за задания",
-      "highlight": "$250",
-      "badge": ""
-    },
     {
       "id": "binance",
       "name": "Binance",
       "url": "https://www.binance.com/join?ref=EARN20",
-      "bonus": "Регистрация + бонус для новых пользователей",
-      "highlight": "бонус",
+      "bonus": "Trade $300 in bStocks and get 15 USDC",
+      "highlight": "15 USDC",
+      "badge": ""
+    },
+    {
+      "id": "bybit",
+      "name": "Bybit",
+      "url": "https://partner.bybit.com/b/bitkoin",
+      "bonus": "Up to $250 each for you and a friend for completing tasks",
+      "highlight": "$250",
       "badge": ""
     },
     {
       "id": "mexc",
       "name": "MEXC",
       "url": "https://www.mexc.com/ru-RU/acquisition/custom-sign-up?shareCode=mexc-bitkoinaz",
-      "bonus": "Регистрация + бонус для новых пользователей",
-      "highlight": "бонус",
+      "bonus": "High rebate rate and exclusive campaigns",
+      "highlight": "High rebate rate",
       "badge": ""
     },
     {
       "id": "bitget",
       "name": "Bitget",
       "url": "https://partner.bitget.com/bg/bitkoinaz",
-      "bonus": "Регистрация + бонус для новых пользователей",
-      "highlight": "бонус",
+      "bonus": "High rebate rate and exclusive campaigns",
+      "highlight": "High rebate rate",
       "badge": ""
     },
     {
       "id": "okx",
       "name": "OKX",
       "url": "https://okx.com/join/KRIPTOQRAF",
-      "bonus": "Регистрация + бонус для новых пользователей",
-      "highlight": "бонус",
+      "bonus": "High rebate rate and exclusive campaigns",
+      "highlight": "High rebate rate",
       "badge": ""
     }
   ]
