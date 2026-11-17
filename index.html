@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#0d1117">
   <meta name="description" content="BitkoinAz - exclusive sign-up offers for crypto exchanges.">
-  <title>Exclusive Offers · BitkoinAz</title>
+  <title>Exclusive Offers for BitkoinAz users</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1117'/%3E%3Cpath fill='%230ecb81' d='M16 5.2l1.2 2.4 2.6.4-1.9 1.8.5 2.6L16 11.2 13.6 12.4l.5-2.6-1.9-1.8 2.6-.4L16 5.2zM8 16.5h16v2H8zm1 3.2h14v7.2a1.6 1.6 0 0 1-1.6 1.6H10.6A1.6 1.6 0 0 1 9 26.9V19.7zm6.2 0h1.6v8.8h-1.6z'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -362,6 +362,55 @@
       line-height: 1.45;
     }
 
+    .langs {
+      margin: 14px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang {
+      appearance: none;
+      border: 0;
+      background: none;
+      color: var(--faint);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 32px;
+      padding: 2px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .lang.is-active { color: var(--green-2); }
+
+    .lang:focus-visible {
+      outline: 2px solid var(--green-2);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    .lang-sep {
+      color: #3d444d;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .flag {
+      width: 16px;
+      height: 11px;
+      display: block;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16);
+    }
+
     .error {
       margin: 24px 0;
       text-align: center;
@@ -402,17 +451,40 @@
   <!-- Fallback used only when links.json fails to load. Edit links.json for normal changes. -->
   <script type="application/json" id="offers-fallback">
 {
-  "title": "Exclusive Offers",
-  "subtitle": "BitkoinAz",
-  "footer": "Rewards are paid by the exchange after sign-up and deposit.",
+  "title": {
+    "en": "Exclusive Offers for BitkoinAz users",
+    "az": "BitkoinAz istifadəçiləri üçün eksklüziv təkliflər"
+  },
+  "subtitle": {
+    "en": "BitkoinAz Youtube Chanell page",
+    "az": "BitkoinAz YouTube kanalı səhifəsi"
+  },
+  "footer": {
+    "en": "Rewards are paid by the exchange after sign-up and deposit.",
+    "az": "Bonusları qeydiyyat və depozitdən sonra birja ödəyir."
+  },
+  "follow": {
+    "en": "Follow us",
+    "az": "Bizə qoşul"
+  },
+  "claim": {
+    "en": "Claim",
+    "az": "Al"
+  },
   "featured": "binance",
   "exchanges": [
     {
       "id": "binance",
       "name": "Binance",
       "url": "https://www.binance.com/join?ref=EARN20",
-      "bonus": "Trade $300 in bStocks and get 15 USDC",
-      "highlight": "15 USDC",
+      "bonus": {
+        "en": "Trade $300 in bStocks and get 15 USDC",
+        "az": "bStocks-da $300 ticarət et və 15 USDC qazan"
+      },
+      "highlight": {
+        "en": "15 USDC",
+        "az": "15 USDC"
+      },
       "badge": "",
       "icon": "icons/binance.svg"
     },
@@ -420,8 +492,14 @@
       "id": "bybit",
       "name": "Bybit",
       "url": "https://partner.bybit.com/b/bitkoin",
-      "bonus": "Up to $250 each for you and a friend for completing tasks",
-      "highlight": "$250",
+      "bonus": {
+        "en": "Up to $250 each for you and a friend for completing tasks",
+        "az": "Tapşırıqları yerinə yetirdikdə sənə və dostuna hər birinizə $250-dək"
+      },
+      "highlight": {
+        "en": "$250",
+        "az": "$250"
+      },
       "badge": "",
       "icon": "icons/bybit.svg"
     },
@@ -429,8 +507,14 @@
       "id": "mexc",
       "name": "MEXC",
       "url": "https://www.mexc.com/ru-RU/acquisition/custom-sign-up?shareCode=mexc-bitkoinaz",
-      "bonus": "High rebate rate and exclusive campaigns",
-      "highlight": "High rebate rate",
+      "bonus": {
+        "en": "High rebate rate and exclusive campaigns",
+        "az": "Yüksək rebate faizi və xüsusi kampaniyalar"
+      },
+      "highlight": {
+        "en": "High rebate rate",
+        "az": "Yüksək rebate faizi"
+      },
       "badge": "",
       "icon": "icons/mexc.svg"
     },
@@ -438,8 +522,14 @@
       "id": "bitget",
       "name": "Bitget",
       "url": "https://partner.bitget.com/bg/bitkoinaz",
-      "bonus": "High rebate rate and exclusive campaigns",
-      "highlight": "High rebate rate",
+      "bonus": {
+        "en": "High rebate rate and exclusive campaigns",
+        "az": "Yüksək rebate faizi və xüsusi kampaniyalar"
+      },
+      "highlight": {
+        "en": "High rebate rate",
+        "az": "Yüksək rebate faizi"
+      },
       "badge": "",
       "icon": "icons/bitget.png"
     },
@@ -447,8 +537,14 @@
       "id": "okx",
       "name": "OKX",
       "url": "https://okx.com/join/KRIPTOQRAF",
-      "bonus": "High rebate rate and exclusive campaigns",
-      "highlight": "High rebate rate",
+      "bonus": {
+        "en": "High rebate rate and exclusive campaigns",
+        "az": "Yüksək rebate faizi və xüsusi kampaniyalar"
+      },
+      "highlight": {
+        "en": "High rebate rate",
+        "az": "Yüksək rebate faizi"
+      },
       "badge": "",
       "icon": "icons/okx.svg"
     }
@@ -456,30 +552,43 @@
   "socials": [
     {
       "id": "telegram",
-      "name": "Telegram Channel",
+      "name": {
+        "en": "Telegram Channel",
+        "az": "Telegram kanalı"
+      },
       "url": "https://t.me/kriptoqraf",
       "icon": "icons/telegram.svg"
     },
     {
       "id": "community",
-      "name": "Community",
+      "name": {
+        "en": "Community",
+        "az": "İcma"
+      },
       "url": "https://t.me/bitkoinaz",
       "icon": "icons/telegram.svg"
     },
     {
       "id": "x",
-      "name": "X (Twitter)",
+      "name": {
+        "en": "X (Twitter)",
+        "az": "X (Twitter)"
+      },
       "url": "https://x.com/khudatzada",
       "icon": "icons/x.svg"
     },
     {
       "id": "youtube",
-      "name": "YouTube",
+      "name": {
+        "en": "YouTube",
+        "az": "YouTube"
+      },
       "url": "https://www.youtube.com/@bitkoinaz",
       "icon": "icons/youtube.svg"
     }
   ]
 }
+
 
   </script>
 
@@ -600,14 +709,50 @@
       }
 
       var GROUP_BADGE = '<span class="group-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><circle cx="5.5" cy="5.1" r="2"/><circle cx="10.5" cy="5.7" r="1.45"/><path d="M1.7 12.5c.55-2.15 2.15-3.25 3.8-3.25s3.25 1.1 3.8 3.25" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round"/><path d="M9.5 9.6c1.15.15 2.15.95 2.6 2.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>';
+      var FLAG_UK = '<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><defs><clipPath id="uk-clip"><rect width="60" height="30" rx="4"/></clipPath></defs><g clip-path="url(#uk-clip)"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30" clip-path="url(#uk-clip)"/><path stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></g></svg>';
+      var FLAG_AZ = '<svg class="flag" viewBox="0 0 300 150" aria-hidden="true"><defs><clipPath id="az-clip"><rect width="300" height="150" rx="18"/></clipPath></defs><g clip-path="url(#az-clip)"><rect width="300" height="50" fill="#00B5E2"/><rect y="50" width="300" height="50" fill="#EF3340"/><rect y="100" width="300" height="50" fill="#509E2F"/><g transform="translate(128,75)"><circle r="20" fill="#fff"/><circle cx="7" r="16" fill="#EF3340"/><g transform="translate(32,0)" fill="#fff"><rect x="-8" y="-8" width="16" height="16"/><rect x="-8" y="-8" width="16" height="16" transform="rotate(45)"/></g></g></g></svg>';
+      var LANG_KEY = "bitkoinaz-lang";
+      var lang = chooseLang();
+      var currentData = null;
 
-      function socialsHtml(list) {
+      function chooseLang() {
+        try {
+          var query = new URLSearchParams(location.search).get("lang");
+          if (query) {
+            query = query.toLowerCase();
+            if (query === "en" || query === "az") return query;
+          }
+        } catch (err) {}
+        try {
+          var saved = localStorage.getItem(LANG_KEY);
+          if (saved === "en" || saved === "az") return saved;
+        } catch (err2) {}
+        var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+        for (var i = 0; i < list.length; i++) {
+          if (String(list[i] || "").toLowerCase().indexOf("az") === 0) return "az";
+        }
+        return "en";
+      }
+
+      function t(value, language) {
+        if (value == null) return "";
+        if (typeof value === "string") return value;
+        if (typeof value === "object") {
+          var chosen = value[language];
+          if (chosen == null || chosen === "") chosen = value.en;
+          if (chosen == null || chosen === "") chosen = value.az;
+          return chosen == null ? "" : String(chosen);
+        }
+        return String(value);
+      }
+
+      function socialsHtml(list, followLabel) {
         if (!Array.isArray(list)) return "";
         var buttons = "";
         list.forEach(function (item) {
           if (!item) return;
           var href = safeUrl(item.url);
-          var name = String(item.name || "").trim();
+          var name = t(item.name, lang).trim();
           if (!href || !name) return;
           var id = normId(item.id);
           var src = safeIcon(item.icon);
@@ -621,19 +766,29 @@
             '<span class="social-label">' + esc(name) + "</span></a>";
         });
         if (!buttons) return "";
-        return '<section class="follow" aria-label="Follow us"><p class="follow-title">Follow us</p><div class="socials">' + buttons + "</div></section>";
+        return '<section class="follow" aria-label="' + esc(followLabel) + '"><p class="follow-title">' + esc(followLabel) + '</p><div class="socials">' + buttons + "</div></section>";
       }
 
-      function claimHtml(url, name, large, id) {
+      function claimHtml(url, name, claimLabel, large, id) {
         var href = safeUrl(url);
-        var label = "Claim " + String(name || "").trim();
+        var label = claimLabel + " " + String(name || "").trim();
         var cls = large ? "claim claim-lg" : "claim";
         if (!href) {
-          return '<span class="' + cls + '" aria-disabled="true">Claim ›</span>';
+          return '<span class="' + cls + '" aria-disabled="true">' + esc(claimLabel) + " ›</span>";
         }
         var slug = normId(id) || "link";
         var path = "click-" + slug + (large ? "-featured" : "");
-        return '<a class="' + cls + '" href="' + esc(href) + '" target="_blank" rel="noopener" aria-label="' + esc(label) + '" data-goatcounter-click="' + esc(path) + '" data-goatcounter-title="' + esc(name) + '">Claim ›</a>';
+        return '<a class="' + cls + '" href="' + esc(href) + '" target="_blank" rel="noopener" aria-label="' + esc(label) + '" data-goatcounter-click="' + esc(path) + '" data-goatcounter-title="' + esc(name) + '">' + esc(claimLabel) + " ›</a>";
+      }
+
+      function langSwitcher() {
+        function btn(code, flag, label) {
+          var active = lang === code ? " is-active" : "";
+          var pressed = lang === code ? "true" : "false";
+          return '<button type="button" class="lang' + active + '" data-set-lang="' + code + '" aria-pressed="' + pressed + '">' + flag + "<span>" + label + "</span></button>";
+        }
+        return '<nav class="langs" aria-label="' + (lang === "az" ? "Dil" : "Language") + '">' +
+          btn("en", FLAG_UK, "EN") + '<span class="lang-sep" aria-hidden="true">|</span>' + btn("az", FLAG_AZ, "AZ") + "</nav>";
       }
 
       function usable(data) {
@@ -653,13 +808,17 @@
       function render(data) {
         var app = document.getElementById("app");
         app.setAttribute("aria-busy", "false");
+        currentData = data;
+        document.documentElement.lang = lang;
         if (!usable(data)) {
-          app.innerHTML = '<p class="error">Couldn\'t load the offers.</p>';
+          app.innerHTML = '<p class="error">' + esc(lang === "az" ? "Təklifləri yükləmək alınmadı." : "Couldn't load the offers.") + "</p>" + langSwitcher();
           return;
         }
 
-        var title = String(data.title || "Exclusive Offers");
-        var subtitle = String(data.subtitle || "");
+        var title = t(data.title, lang).trim() || (lang === "az" ? "Eksklüziv təkliflər" : "Exclusive Offers");
+        var subtitle = t(data.subtitle, lang).trim();
+        var claimLabel = t(data.claim, lang).trim() || (lang === "az" ? "Al" : "Claim");
+        var followLabel = t(data.follow, lang).trim() || (lang === "az" ? "Bizə qoşul" : "Follow us");
         document.title = subtitle ? title + " · " + subtitle : title;
 
         var featuredId = normId(data.featured);
@@ -679,10 +838,10 @@
 
         if (featured) {
           html += '<article class="featured"><div class="featured-top">' +
-            logoHtml(featured.id, featured.name, featured.icon) +
-            '<div><div class="name-line"><h2>' + esc(featured.name) + "</h2>" + tagHtml(featured.badge) + "</div>" +
-            '<p class="bonus">' + bonusHtml(featured.bonus, featured.highlight) + "</p></div></div>" +
-            claimHtml(featured.url, featured.name, true, featured.id) +
+            logoHtml(featured.id, t(featured.name, lang), featured.icon) +
+            '<div><div class="name-line"><h2>' + esc(t(featured.name, lang)) + "</h2>" + tagHtml(t(featured.badge, lang)) + "</div>" +
+            '<p class="bonus">' + bonusHtml(t(featured.bonus, lang), t(featured.highlight, lang)) + "</p></div></div>" +
+            claimHtml(featured.url, t(featured.name, lang), claimLabel, true, featured.id) +
             "</article>";
         }
 
@@ -690,24 +849,35 @@
           html += '<div class="list">';
           rest.forEach(function (item) {
             html += '<article class="row">' +
-              logoHtml(item.id, item.name, item.icon) +
-              '<div class="meta"><div class="name-line"><h2>' + esc(item.name) + "</h2>" + tagHtml(item.badge) + "</div>" +
-              '<p class="bonus">' + bonusHtml(item.bonus, item.highlight) + "</p></div>" +
-              claimHtml(item.url, item.name, false, item.id) +
+              logoHtml(item.id, t(item.name, lang), item.icon) +
+              '<div class="meta"><div class="name-line"><h2>' + esc(t(item.name, lang)) + "</h2>" + tagHtml(t(item.badge, lang)) + "</div>" +
+              '<p class="bonus">' + bonusHtml(t(item.bonus, lang), t(item.highlight, lang)) + "</p></div>" +
+              claimHtml(item.url, t(item.name, lang), claimLabel, false, item.id) +
               "</article>";
           });
           html += "</div>";
         }
 
-        html += socialsHtml(data.socials);
+        html += socialsHtml(data.socials, followLabel);
 
-        var footer = String(data.footer || "").trim();
+        var footer = t(data.footer, lang).trim();
         if (footer) html += "<footer>" + esc(footer) + "</footer>";
+        html += langSwitcher();
         app.innerHTML = html;
         if (window.goatcounter && typeof window.goatcounter.bind_events === "function") {
           window.goatcounter.bind_events();
         }
       }
+
+      document.getElementById("app").addEventListener("click", function (event) {
+        var btn = event.target.closest("[data-set-lang]");
+        if (!btn || !currentData) return;
+        var next = btn.getAttribute("data-set-lang");
+        if ((next !== "en" && next !== "az") || next === lang) return;
+        lang = next;
+        try { localStorage.setItem(LANG_KEY, next); } catch (err) {}
+        render(currentData);
+      });
 
       fetch("links.json", { cache: "no-cache" })
         .then(function (res) {

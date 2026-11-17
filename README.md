@@ -50,6 +50,19 @@
 
 Чтобы сделать биржу главной, запишите её `id` в поле `featured`.
 
+## Языки EN и AZ
+
+Переводимые поля — `title`, `subtitle`, `footer`, `follow`, `claim`, а у бирж `bonus` и `highlight`, у соцсетей `name`. Значение может быть строкой (тогда оно одно на оба языка) или объектом:
+
+```json
+"bonus": {
+  "en": "Trade $300 in bStocks and get 15 USDC",
+  "az": "bStocks-da $300 ticarət et və 15 USDC qazan"
+}
+```
+
+`highlight` должен быть точной подстрокой `bonus` на том же языке. Внизу страницы переключатель EN | AZ запоминает выбор в браузере. Ссылка с `?lang=az` или `?lang=en` открывает этот язык сразу. Если выбора ещё нет и язык браузера начинается с `az`, страница откроется на азербайджанском. Пути кликов в GoatCounter (`click-*`, `social-*`) от языка не зависят.
+
 ## Статистика
 
 Просмотры и клики смотрите на [https://bitkoinaz.goatcounter.com](https://bitkoinaz.goatcounter.com). Клики попадают отдельными путями: `click-<id>` для кнопок Claim, `click-<id>-featured` для большой карточки и `social-<id>` для блока Follow us. Новый `id` в `links.json` получает свой счётчик сам.

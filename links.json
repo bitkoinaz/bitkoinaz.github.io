@@ -1,15 +1,38 @@
 {
-  "title": "Exclusive Offers for BitkoinAz users",
-  "subtitle": "BitkoinAz Youtube Chanell page",
-  "footer": "Rewards are paid by the exchange after sign-up and deposit.",
+  "title": {
+    "en": "Exclusive Offers for BitkoinAz users",
+    "az": "BitkoinAz istifadəçiləri üçün eksklüziv təkliflər"
+  },
+  "subtitle": {
+    "en": "BitkoinAz Youtube Chanell page",
+    "az": "BitkoinAz YouTube kanalı səhifəsi"
+  },
+  "footer": {
+    "en": "Rewards are paid by the exchange after sign-up and deposit.",
+    "az": "Bonusları qeydiyyat və depozitdən sonra birja ödəyir."
+  },
+  "follow": {
+    "en": "Follow us",
+    "az": "Bizə qoşul"
+  },
+  "claim": {
+    "en": "Claim",
+    "az": "Al"
+  },
   "featured": "binance",
   "exchanges": [
     {
       "id": "binance",
       "name": "Binance",
       "url": "https://www.binance.com/join?ref=EARN20",
-      "bonus": "Trade $300 in bStocks and get 15 USDC",
-      "highlight": "15 USDC",
+      "bonus": {
+        "en": "Trade $300 in bStocks and get 15 USDC",
+        "az": "bStocks-da $300 ticarət et və 15 USDC qazan"
+      },
+      "highlight": {
+        "en": "15 USDC",
+        "az": "15 USDC"
+      },
       "badge": "",
       "icon": "icons/binance.svg"
     },
@@ -17,8 +40,14 @@
       "id": "bybit",
       "name": "Bybit",
       "url": "https://partner.bybit.com/b/bitkoin",
-      "bonus": "Up to $250 each for you and a friend for completing tasks",
-      "highlight": "$250",
+      "bonus": {
+        "en": "Up to $250 each for you and a friend for completing tasks",
+        "az": "Tapşırıqları yerinə yetirdikdə sənə və dostuna hər birinizə $250-dək"
+      },
+      "highlight": {
+        "en": "$250",
+        "az": "$250"
+      },
       "badge": "",
       "icon": "icons/bybit.svg"
     },
@@ -26,8 +55,14 @@
       "id": "mexc",
       "name": "MEXC",
       "url": "https://www.mexc.com/ru-RU/acquisition/custom-sign-up?shareCode=mexc-bitkoinaz",
-      "bonus": "High rebate rate and exclusive campaigns",
-      "highlight": "High rebate rate",
+      "bonus": {
+        "en": "High rebate rate and exclusive campaigns",
+        "az": "Yüksək rebate faizi və xüsusi kampaniyalar"
+      },
+      "highlight": {
+        "en": "High rebate rate",
+        "az": "Yüksək rebate faizi"
+      },
       "badge": "",
       "icon": "icons/mexc.svg"
     },
@@ -35,8 +70,14 @@
       "id": "bitget",
       "name": "Bitget",
       "url": "https://partner.bitget.com/bg/bitkoinaz",
-      "bonus": "High rebate rate and exclusive campaigns",
-      "highlight": "High rebate rate",
+      "bonus": {
+        "en": "High rebate rate and exclusive campaigns",
+        "az": "Yüksək rebate faizi və xüsusi kampaniyalar"
+      },
+      "highlight": {
+        "en": "High rebate rate",
+        "az": "Yüksək rebate faizi"
+      },
       "badge": "",
       "icon": "icons/bitget.png"
     },
@@ -44,8 +85,14 @@
       "id": "okx",
       "name": "OKX",
       "url": "https://okx.com/join/KRIPTOQRAF",
-      "bonus": "High rebate rate and exclusive campaigns",
-      "highlight": "High rebate rate",
+      "bonus": {
+        "en": "High rebate rate and exclusive campaigns",
+        "az": "Yüksək rebate faizi və xüsusi kampaniyalar"
+      },
+      "highlight": {
+        "en": "High rebate rate",
+        "az": "Yüksək rebate faizi"
+      },
       "badge": "",
       "icon": "icons/okx.svg"
     }
@@ -53,25 +100,37 @@
   "socials": [
     {
       "id": "telegram",
-      "name": "Telegram Channel",
+      "name": {
+        "en": "Telegram Channel",
+        "az": "Telegram kanalı"
+      },
       "url": "https://t.me/kriptoqraf",
       "icon": "icons/telegram.svg"
     },
     {
       "id": "community",
-      "name": "Community",
+      "name": {
+        "en": "Community",
+        "az": "İcma"
+      },
       "url": "https://t.me/bitkoinaz",
       "icon": "icons/telegram.svg"
     },
     {
       "id": "x",
-      "name": "X (Twitter)",
+      "name": {
+        "en": "X (Twitter)",
+        "az": "X (Twitter)"
+      },
       "url": "https://x.com/khudatzada",
       "icon": "icons/x.svg"
     },
     {
       "id": "youtube",
-      "name": "YouTube",
+      "name": {
+        "en": "YouTube",
+        "az": "YouTube"
+      },
       "url": "https://www.youtube.com/@bitkoinaz",
       "icon": "icons/youtube.svg"
     }
