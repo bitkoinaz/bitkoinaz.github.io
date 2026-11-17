@@ -51,6 +51,22 @@
       "badge": "",
       "icon": "icons/bybit.svg"
     },
+        {
+      "id": "weex",
+      "name": "Weex",
+      "url": "https://www.weex.com/ru/register?vipCode=bitkoinaz",
+      "bonus": {
+        "en": "Up to $250 each for you and a friend for completing tasks",
+        "az": "🎁 Yeni istifadəçilərə xüsusi başlanğıc mükafatı!
+Ən azı 100 USDT xalis vəsait yatırın və 500 USDT fyuçers ticarət həcminə çataraq 10 USDT bonus qazanın."
+      },
+      "highlight": {
+        "en": "$250",
+        "az": "$250"
+      },
+      "badge": "",
+      "icon": "icons/weex.png"
+    },
     {
       "id": "mexc",
       "name": "MEXC",
