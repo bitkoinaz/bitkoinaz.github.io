@@ -10,7 +10,8 @@
       "url": "https://www.binance.com/join?ref=EARN20",
       "bonus": "Trade $300 in bStocks and get 15 USDC",
       "highlight": "15 USDC",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/binance.svg"
     },
     {
       "id": "bybit",
@@ -18,7 +19,8 @@
       "url": "https://partner.bybit.com/b/bitkoin",
       "bonus": "Up to $250 each for you and a friend for completing tasks",
       "highlight": "$250",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/bybit.svg"
     },
     {
       "id": "mexc",
@@ -26,7 +28,8 @@
       "url": "https://www.mexc.com/ru-RU/acquisition/custom-sign-up?shareCode=mexc-bitkoinaz",
       "bonus": "High rebate rate and exclusive campaigns",
       "highlight": "High rebate rate",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/mexc.svg"
     },
     {
       "id": "bitget",
@@ -34,15 +37,8 @@
       "url": "https://partner.bitget.com/bg/bitkoinaz",
       "bonus": "High rebate rate and exclusive campaigns",
       "highlight": "High rebate rate",
-      "badge": ""
-    },
-       {
-      "id": "bitget",
-      "name": "Bitget",
-      "url": "https://partner.bitget.com/bg/bitkoinaz",
-      "bonus": "High rebate rate and exclusive campaigns",
-      "highlight": "High rebate rate",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/bitget.png"
     },
     {
       "id": "okx",
@@ -50,7 +46,34 @@
       "url": "https://okx.com/join/KRIPTOQRAF",
       "bonus": "High rebate rate and exclusive campaigns",
       "highlight": "High rebate rate",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/okx.svg"
+    }
+  ],
+  "socials": [
+    {
+      "id": "telegram",
+      "name": "Telegram Channel",
+      "url": "https://t.me/kriptoqraf",
+      "icon": "icons/telegram.svg"
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "url": "https://t.me/bitkoinaz",
+      "icon": "icons/telegram.svg"
+    },
+    {
+      "id": "x",
+      "name": "X (Twitter)",
+      "url": "https://x.com/khudatzada",
+      "icon": "icons/x.svg"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@bitkoinaz",
+      "icon": "icons/youtube.svg"
     }
   ]
 }

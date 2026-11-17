@@ -241,6 +241,119 @@
 
     .claim:active { transform: scale(0.98); }
 
+    .logo.has-icon {
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .logo.has-icon img {
+      width: 86%;
+      height: 86%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .follow { margin-top: 18px; }
+
+    .follow-title {
+      margin: 0 0 10px;
+      text-align: center;
+      color: var(--faint);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .socials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .social {
+      min-width: 0;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .social-icon {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      flex: none;
+      display: grid;
+      place-items: center;
+    }
+
+    .social-icon img,
+    .social-letter {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .social-letter {
+      border-radius: 6px;
+      background: #21262d;
+      color: var(--text);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    .social-icon.is-x {
+      background: #000;
+      border-radius: 6px;
+    }
+
+    .social-icon.is-x img { width: 13px; height: 13px; }
+
+    .social-label {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .group-badge {
+      position: absolute;
+      right: -5px;
+      bottom: -3px;
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 0 2px var(--card);
+    }
+
+    .group-badge svg { width: 11px; height: 11px; display: block; }
+
+    .social:focus-visible {
+      outline: 2px solid var(--green-2);
+      outline-offset: 2px;
+    }
+
+    .social:active { transform: scale(0.98); }
+
     footer {
       margin: 16px 8px 0;
       text-align: center;
@@ -261,7 +374,7 @@
         border-color: var(--line-strong);
       }
 
-      .claim:hover { filter: brightness(1.08); }
+      .claim:hover, .social:hover { filter: brightness(1.08); }
     }
 
     @media (min-width: 800px) {
@@ -279,7 +392,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .claim:active { transform: none; }
+      .claim:active, .social:active { transform: none; }
     }
   </style>
 </head>
@@ -300,7 +413,8 @@
       "url": "https://www.binance.com/join?ref=EARN20",
       "bonus": "Trade $300 in bStocks and get 15 USDC",
       "highlight": "15 USDC",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/binance.svg"
     },
     {
       "id": "bybit",
@@ -308,7 +422,8 @@
       "url": "https://partner.bybit.com/b/bitkoin",
       "bonus": "Up to $250 each for you and a friend for completing tasks",
       "highlight": "$250",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/bybit.svg"
     },
     {
       "id": "mexc",
@@ -316,7 +431,8 @@
       "url": "https://www.mexc.com/ru-RU/acquisition/custom-sign-up?shareCode=mexc-bitkoinaz",
       "bonus": "High rebate rate and exclusive campaigns",
       "highlight": "High rebate rate",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/mexc.svg"
     },
     {
       "id": "bitget",
@@ -324,7 +440,8 @@
       "url": "https://partner.bitget.com/bg/bitkoinaz",
       "bonus": "High rebate rate and exclusive campaigns",
       "highlight": "High rebate rate",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/bitget.png"
     },
     {
       "id": "okx",
@@ -332,10 +449,38 @@
       "url": "https://okx.com/join/KRIPTOQRAF",
       "bonus": "High rebate rate and exclusive campaigns",
       "highlight": "High rebate rate",
-      "badge": ""
+      "badge": "",
+      "icon": "icons/okx.svg"
+    }
+  ],
+  "socials": [
+    {
+      "id": "telegram",
+      "name": "Telegram Channel",
+      "url": "https://t.me/kriptoqraf",
+      "icon": "icons/telegram.svg"
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "url": "https://t.me/bitkoinaz",
+      "icon": "icons/telegram.svg"
+    },
+    {
+      "id": "x",
+      "name": "X (Twitter)",
+      "url": "https://x.com/khudatzada",
+      "icon": "icons/x.svg"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@bitkoinaz",
+      "icon": "icons/youtube.svg"
     }
   ]
 }
+
   </script>
 
   <script>
@@ -388,27 +533,94 @@
         return String(id || "").trim().toLowerCase();
       }
 
-      function logoHtml(id, name) {
+      function safeIcon(path) {
+        var raw = String(path || "").trim();
+        if (!/^icons\/[a-z0-9][a-z0-9._-]*\.(svg|png|webp)$/i.test(raw)) return "";
+        return raw;
+      }
+
+      function fallbackStyle(id, name) {
         var brand = BRANDS[normId(id)];
-        if (brand && brand.mark) {
-          return '<div class="logo" style="background:' + brand.bg + '">' + brand.mark + "</div>";
-        }
         if (brand && brand.text) {
-          var cls = "logo" + (brand.word ? " logo-word" : "") + (brand.line ? " logo-line" : "");
-          return '<div class="' + cls + '" style="background:' + brand.bg + ";color:" + brand.fg + '">' + esc(brand.text) + "</div>";
+          return { text: brand.text, bg: brand.bg, fg: brand.fg, word: !!brand.word, line: !!brand.line };
         }
+        if (brand && brand.bg) return { text: "B", bg: brand.bg, fg: "#1E2329" };
         var label = String(name || "?").trim();
         var letter = label ? Array.from(label)[0].toUpperCase() : "?";
         var hash = 0;
         for (var i = 0; i < label.length; i++) hash = (hash * 31 + label.charCodeAt(i)) >>> 0;
         var pair = PALETTE[hash % PALETTE.length];
-        return '<div class="logo" style="background:' + pair[0] + ";color:" + pair[1] + '">' + esc(letter) + "</div>";
+        return { text: letter, bg: pair[0], fg: pair[1] };
       }
+
+      function letterHtml(style) {
+        var cls = "logo logo-letter" + (style.word ? " logo-word" : "") + (style.line ? " logo-line" : "");
+        return '<div class="' + cls + '" style="background:' + style.bg + ";color:" + style.fg + '">' + esc(style.text) + "</div>";
+      }
+
+      function logoHtml(id, name, icon) {
+        var src = safeIcon(icon);
+        var style = fallbackStyle(id, name);
+        if (!src) {
+          var brand = BRANDS[normId(id)];
+          if (brand && brand.mark) {
+            return '<div class="logo" style="background:' + brand.bg + '">' + brand.mark + "</div>";
+          }
+          return letterHtml(style);
+        }
+        return '<div class="logo has-icon"><img src="' + esc(src) + '" alt="" data-letter="' + esc(style.text) + '" data-bg="' + style.bg + '" data-fg="' + style.fg + '"' +
+          (style.word ? ' data-word="1"' : "") + (style.line ? ' data-line="1"' : "") +
+          ' onerror="logoFallback(this)"></div>';
+      }
+
+      function logoFallback(img) {
+        var parent = img && img.parentNode;
+        if (!parent) return;
+        parent.className = "logo logo-letter" +
+          (img.getAttribute("data-word") === "1" ? " logo-word" : "") +
+          (img.getAttribute("data-line") === "1" ? " logo-line" : "");
+        parent.style.background = img.getAttribute("data-bg") || "#30363d";
+        parent.style.color = img.getAttribute("data-fg") || "#ffffff";
+        parent.textContent = img.getAttribute("data-letter") || "?";
+      }
+      window.logoFallback = logoFallback;
+
+      function socialFallback(img) {
+        var span = document.createElement("span");
+        span.className = "social-letter";
+        span.textContent = img.getAttribute("data-letter") || "?";
+        if (img.parentNode) img.replaceWith(span);
+      }
+      window.socialFallback = socialFallback;
 
       function tagHtml(badge) {
         var text = String(badge || "").trim();
         if (!text) return "";
         return '<span class="tag">' + esc(text) + "</span>";
+      }
+
+      var GROUP_BADGE = '<span class="group-badge" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><circle cx="5.5" cy="5.1" r="2"/><circle cx="10.5" cy="5.7" r="1.45"/><path d="M1.7 12.5c.55-2.15 2.15-3.25 3.8-3.25s3.25 1.1 3.8 3.25" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round"/><path d="M9.5 9.6c1.15.15 2.15.95 2.6 2.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>';
+
+      function socialsHtml(list) {
+        if (!Array.isArray(list)) return "";
+        var buttons = "";
+        list.forEach(function (item) {
+          if (!item) return;
+          var href = safeUrl(item.url);
+          var name = String(item.name || "").trim();
+          if (!href || !name) return;
+          var id = normId(item.id);
+          var src = safeIcon(item.icon);
+          var letter = Array.from(name)[0].toUpperCase();
+          var icon = src
+            ? '<img src="' + esc(src) + '" alt="" data-letter="' + esc(letter) + '" onerror="socialFallback(this)">'
+            : '<span class="social-letter">' + esc(letter) + "</span>";
+          buttons += '<a class="social" href="' + esc(href) + '" target="_blank" rel="noopener">' +
+            '<span class="social-icon' + (id === "x" ? " is-x" : "") + '">' + icon + (id === "community" ? GROUP_BADGE : "") + "</span>" +
+            '<span class="social-label">' + esc(name) + "</span></a>";
+        });
+        if (!buttons) return "";
+        return '<section class="follow" aria-label="Follow us"><p class="follow-title">Follow us</p><div class="socials">' + buttons + "</div></section>";
       }
 
       function claimHtml(url, name, large) {
@@ -464,7 +676,7 @@
 
         if (featured) {
           html += '<article class="featured"><div class="featured-top">' +
-            logoHtml(featured.id, featured.name) +
+            logoHtml(featured.id, featured.name, featured.icon) +
             '<div><div class="name-line"><h2>' + esc(featured.name) + "</h2>" + tagHtml(featured.badge) + "</div>" +
             '<p class="bonus">' + bonusHtml(featured.bonus, featured.highlight) + "</p></div></div>" +
             claimHtml(featured.url, featured.name, true) +
@@ -475,7 +687,7 @@
           html += '<div class="list">';
           rest.forEach(function (item) {
             html += '<article class="row">' +
-              logoHtml(item.id, item.name) +
+              logoHtml(item.id, item.name, item.icon) +
               '<div class="meta"><div class="name-line"><h2>' + esc(item.name) + "</h2>" + tagHtml(item.badge) + "</div>" +
               '<p class="bonus">' + bonusHtml(item.bonus, item.highlight) + "</p></div>" +
               claimHtml(item.url, item.name, false) +
@@ -483,6 +695,8 @@
           });
           html += "</div>";
         }
+
+        html += socialsHtml(data.socials);
 
         var footer = String(data.footer || "").trim();
         if (footer) html += "<footer>" + esc(footer) + "</footer>";
