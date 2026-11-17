@@ -1,0 +1,48 @@
+{
+  "title": "Exclusive Offers",
+  "subtitle": "BitkoinAz",
+  "footer": "Бонусы выплачивает биржа после регистрации и депозита.",
+  "featured": "bybit",
+  "exchanges": [
+    {
+      "id": "bybit",
+      "name": "Bybit",
+      "url": "https://partner.bybit.com/b/bitkoin",
+      "bonus": "До $250 каждому: тебе и другу за задания",
+      "highlight": "$250",
+      "badge": ""
+    },
+    {
+      "id": "binance",
+      "name": "Binance",
+      "url": "https://www.binance.com/join?ref=EARN20",
+      "bonus": "Регистрация + бонус для новых пользователей",
+      "highlight": "бонус",
+      "badge": ""
+    },
+    {
+      "id": "mexc",
+      "name": "MEXC",
+      "url": "https://www.mexc.com/ru-RU/acquisition/custom-sign-up?shareCode=mexc-bitkoinaz",
+      "bonus": "Регистрация + бонус для новых пользователей",
+      "highlight": "бонус",
+      "badge": ""
+    },
+    {
+      "id": "bitget",
+      "name": "Bitget",
+      "url": "https://partner.bitget.com/bg/bitkoinaz",
+      "bonus": "Регистрация + бонус для новых пользователей",
+      "highlight": "бонус",
+      "badge": ""
+    },
+    {
+      "id": "okx",
+      "name": "OKX",
+      "url": "https://okx.com/join/KRIPTOQRAF",
+      "bonus": "Регистрация + бонус для новых пользователей",
+      "highlight": "бонус",
+      "badge": ""
+    }
+  ]
+}
