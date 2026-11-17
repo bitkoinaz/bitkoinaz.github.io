@@ -26,8 +26,8 @@
       "name": "Binance",
       "url": "https://www.binance.com/join?ref=EARN20",
       "bonus": {
-        "en": "Trade $300 in bStocks and get 15 USDC",
-        "az": "bStocks-da $300 ticarət et və 15 USDC qazan"
+        "en": "Trade $300 in bStocks and get 15 USDC - Only with EARN20 referal code",
+        "az": "Yalnız EARN20 referal kodu ilə bStocks-da $300 ticarət et və 15 USDC qazan"
       },
       "highlight": {
         "en": "15 USDC",
@@ -60,8 +60,8 @@
         "az": " Yeni istifadəçilərə xüsusi başlanğıc mükafatı! Ən azı 100 USDT xalis vəsait yatırın və 500 USDT fyuçers ticarət həcminə çataraq 10 USDT bonus qazanın."
       },
       "highlight": {
-        "en": "$250",
-        "az": "$250"
+        "en": "$10",
+        "az": "$10"
       },
       "badge": "",
       "icon": "icons/weex.png"
